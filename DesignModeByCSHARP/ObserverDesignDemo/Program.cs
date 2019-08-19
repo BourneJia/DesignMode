@@ -6,12 +6,10 @@ namespace ObserverDesignDemo
     {
         static void Main(string[] args)
         {
-            Subscriber scriber = new Subscriber("GameFun");
-            XSJGame xsjGame = new XSJGame();
+            XSJGame xsjGame = new XSJJW3("剑网3", "指尖江湖发布");
 
-            xsjGame.Subscriber = scriber;
-            xsjGame.Symbol = "XSJ GAME";
-            xsjGame.Info = "Have a new game published ....";
+            xsjGame.AddObserver(new Subscriber("玩家1"));
+            xsjGame.AddObserver(new Subscriber("玩家2"));
 
             xsjGame.Update();
 
