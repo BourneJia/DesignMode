@@ -6,7 +6,16 @@ namespace ObserverDesignDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Subscriber scriber = new Subscriber("GameFun");
+            XSJGame xsjGame = new XSJGame();
+
+            xsjGame.Subscriber = scriber;
+            xsjGame.Symbol = "XSJ GAME";
+            xsjGame.Info = "Have a new game published ....";
+
+            xsjGame.Update();
+
+            Console.ReadLine();
         }
     }
 }
